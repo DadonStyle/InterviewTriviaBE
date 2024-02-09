@@ -1,7 +1,7 @@
-import express from "express";
+import express, { Application, Request, Response } from "express";
 import winston from "winston";
 
-const app = express();
+const app: Application = express();
 const port = 3000;
 
 const logger = winston.createLogger({
@@ -15,8 +15,8 @@ const logger = winston.createLogger({
 // logger.info("info log example");
 // logger.error("error log example");
 
-app.get("/", (req, res) => {
-  res.send("hello3 world");
+app.get("/", (req: Request, res: Response) => {
+  res.send("hello4 world");
 });
 
 app.listen(port, () => {
